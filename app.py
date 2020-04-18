@@ -16,13 +16,13 @@ from linebot import (
 
 app = Flask(__name__)
 
-lineaccesstoken = 'fwlgox98KgndhARaurqiap0xvMfrb37BiygpvnNMv0NypzWx9hYEh6AzfQVw+TDOLKtroPoHIEPeqme5FneySBH5epjlOvk8NCwAp4dj+5vTfHPjA0hZcvZ9tUGUN4nzvsGqssC1tzhTD0uDq5WAkQdB04t89/1O/w1cDnyilFU='
+lineaccesstoken = 'sVi63a9na79V/b+yduVI4yExkvFLcsZGHpCNgiDRnJVNdlWG22i5ICYiEfSmyX3o0ES4ZZ268XYaGETDPlSEu6htUND4nMeICcbHDvUoj3JHlLO0ZQBLh26jgoWOOk6moTB3eRp8U0+wBHbt54SZQwdB04t89/1O/w1cDnyilFU='
 line_bot_api = LineBotApi(lineaccesstoken)
 
 ####################### new ########################
 @app.route('/')
 def index():
-    return "Hello Motherfuckerrr!"
+    return "Hello World!"
 
 
 @app.route('/webhook', methods=['POST'])
