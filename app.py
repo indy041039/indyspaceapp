@@ -22,7 +22,7 @@ line_bot_api = LineBotApi(lineaccesstoken)
 ####################### new ########################
 @app.route('/')
 def index():
-    return "Hello World!"
+    return "Hello Motherfuckerrr!"
 
 
 @app.route('/webhook', methods=['POST'])
