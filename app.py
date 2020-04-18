@@ -25,7 +25,7 @@ def index():
     return "Hello World! 55555"
 
 
-@app.route('/callback', methods=['POST'])
+@app.route('/webhook', methods=['POST'])
 def callback():
     json_line = request.get_json(force=False,cache=False)
     json_line = json.dumps(json_line)
