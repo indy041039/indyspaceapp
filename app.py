@@ -50,15 +50,6 @@ def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text))
-
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=request.headers['X-Line-Signature']))
-
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=request.get_data(as_text=True)))
-
-
+        
 if __name__ == "__main__":
     app.run()
