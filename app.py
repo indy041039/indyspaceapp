@@ -27,7 +27,7 @@ def index():
     return "This is Line Chatbot"
 
 
-@app.route("/callback", methods=['POST'])
+@app.route("/callback", methods=['POST']) ## or 'webhook' it's actually the same
 def callback():
     # get X-Line-Signature header value
     signature = request.headers['X-Line-Signature']
@@ -45,12 +45,19 @@ def callback():
 
     return 'OK'
 
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text))
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=request.headers['X-Line-Signature']))
+
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text=request.get_data(as_text=True)))
 
 
 if __name__ == "__main__":
