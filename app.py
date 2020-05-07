@@ -52,10 +52,12 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=event.message.text))
     line_bot_api.broadcast(
-        
-        TextSendMessage(text='THIS IS A BROADCAST MESSAGE')
-        
-        )
+        TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
+
+@handler.default()
+def broadcast():
+    line_bot_api.broadcast(
+    TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
 if __name__ == "__main__":
     app.run()
