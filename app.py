@@ -54,9 +54,10 @@ def handle_message(event):
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
-@handler.default()
-def default(event):
-    print(event)
+@handler
+def default():
+    line_bot_api.broadcast(
+        TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
 if __name__ == "__main__":
     app.run()
