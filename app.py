@@ -52,10 +52,5 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=event.message.text))
 
-@handler.add(MessageEvent, message=TextSendMessage)
-def broad(event):
-    line_bot_api.broadcast(
-        TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
-
 if __name__ == "__main__":
     app.run()
