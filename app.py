@@ -45,10 +45,6 @@ def callback():
 
     return 'OK'
 
-def default():
-    line_bot_api.broadcast(
-        TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
-
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     print(event.message.text)
@@ -57,6 +53,10 @@ def handle_message(event):
         TextSendMessage(text=event.message.text))
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
+
+@handler.default()
+def default(event):
+    print(event)
 
 if __name__ == "__main__":
     app.run()
