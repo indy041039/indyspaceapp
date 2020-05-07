@@ -54,7 +54,7 @@ def handle_message(event):
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
-@handler.add(PostbackEvent)
+@handler.add(PostbackEvent, message=TextMessage)
 def broad():
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
