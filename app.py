@@ -53,7 +53,7 @@ def handle_message(event):
         TextSendMessage(text=event.message.text))
 
 @handler.add(MessageEvent, message=TextSendMessage)
-def broad():
+def broad(event):
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
