@@ -5,6 +5,7 @@
 from flask import Flask, jsonify, render_template, request
 import json
 import numpy as np
+import requests
 
 from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,TemplateSendMessage,ImageSendMessage, StickerSendMessage, AudioSendMessage
@@ -25,6 +26,16 @@ handler = WebhookHandler(linesecret)
 @app.route('/')
 def index():
     return "This is Line Chatbot"
+
+@app.route('/notify')
+def notifyme():
+    url = 'https://notify-api.line.me/api/notify'
+    token = 'O3xTQiNJPHuFwZmrnsprDD5jTov5CsKrjpMNJ3wMLwo'
+    headers = {'content-type':'application/x-www-form-urlencoded','Authorization':'Bearer '+token}
+
+    msg = 'This is Line Notify !'
+    r = requests.post(url, headers=headers , data = {'message':msg})
+
 
 
 @app.route("/callback", methods=['POST']) ## or 'webhook' it's actually the same
