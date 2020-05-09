@@ -55,12 +55,5 @@ def handle_message(event):
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
 
-@sched.scheduled_job('interval', minutes=1)
-def timed_job():
-    line_bot_api.broadcast(
-        TextSendMessage(text='THIS IS A BROADCAST MESSAGE'))
-    print('Broadcast every minute test')
-
-
 if __name__ == "__main__":
     app.run()
