@@ -16,10 +16,10 @@ line_bot_api = LineBotApi(lineaccesstoken)
 handler = WebhookHandler(linesecret)
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=1)
+@sched.scheduled_job('interval', minutes=10)
 def timed_job():
     line_bot_api.broadcast(
-        TextSendMessage(text='THIS IS A BROADCAST MESSAGE EVERY MINUTE'))
+        TextSendMessage(text='THIS IS A BROADCAST MESSAGE EVERY 10 MINUTE'))
     print('BROADCAST')
 
 @sched.scheduled_job('cron', day_of_week='mon-sun', hour=10)
