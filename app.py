@@ -74,7 +74,12 @@ def handle_message(event):
 ##TextSendMessage(text=event.message.text))
 ##line_bot_api.broadcast(
 ##TextSendMessage(text=get_thestandard_news()))
-    if text.lower() == 'news':
+    if text.lower().strip() == 'news':
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=get_thestandard_news()))
+    elif text == 'How to use indyspaceapp.':
+        ans = 'How to use indyspaceapp\n1.อัปเดตข่าว (พิมพ์ news)\n\nindyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ\nhttps://forms.gle/Em3AKBT8mem6ZwqL9'
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
@@ -82,8 +87,6 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=event.message.text))
-
-
 
 if __name__ == "__main__":
     app.run()
