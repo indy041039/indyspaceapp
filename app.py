@@ -26,6 +26,9 @@ from linebot.models.template import *
 from linebot import (
     LineBotApi, WebhookHandler
 )
+from linebot.exceptions import (
+    LineBotApiError, InvalidSignatureError
+)
 from web_scraping_the_standard import *
 
 app = Flask(__name__)
