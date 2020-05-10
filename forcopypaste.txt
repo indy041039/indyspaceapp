@@ -1,0 +1,362 @@
+{
+    "type": "carousel",
+    "contents": [
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "type": "bubble",
+        "direction": "ltr",
+        "header": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "NEWS",
+              "align": "start",
+              "weight": "bold",
+              "color": "#7B7272"
+            }
+          ]
+        },
+        "hero": {
+          "type": "image",
+          "url": "https://thestandard.co/wp-content/themes/thestandard.v3/assets/img/text-logo.png",
+          "size": "5xl",
+          "aspectRatio": "1.51:1"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "text",
+              "text": "Google และ Facebook ยืดมาตรการ Work from Home",
+              "size": "lg",
+              "align": "start",
+              "weight": "regular",
+              "wrap": true
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "horizontal",
+          "contents": [
+            {
+              "type": "button",
+              "action": {
+                "type": "uri",
+                "label": "Read the news",
+                "uri": "https://linecorp.com"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
