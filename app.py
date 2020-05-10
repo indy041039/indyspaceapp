@@ -82,7 +82,7 @@ def handle_message(event):
         ans = 'How to use indyspaceapp\n1.อัปเดตข่าว (พิมพ์ news)\n\nindyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ\nhttps://forms.gle/Em3AKBT8mem6ZwqL9'
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=get_thestandard_news()))
+            TextSendMessage(text=ans))
     else:
         line_bot_api.reply_message(
             event.reply_token,
