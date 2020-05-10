@@ -74,7 +74,7 @@ def handle_message(event):
 ##TextSendMessage(text=event.message.text))
 ##line_bot_api.broadcast(
 ##TextSendMessage(text=get_thestandard_news()))
-    if text.lowercase() == 'news':
+    if text.lower() == 'news':
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
