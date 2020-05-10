@@ -41,4 +41,4 @@ def get_thestandard_news():
     for i in range(0,7):
         text = text + '{} \ncategory: {} \n{} \n\n'.format(heading[i], category[i], link[i])
     
-    return text
+    return text.strip()
