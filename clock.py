@@ -16,7 +16,7 @@ line_bot_api = LineBotApi(lineaccesstoken)
 handler = WebhookHandler(linesecret)
 sched = BlockingScheduler()
 
-@sched.scheduled_job('cron', day_of_week='mon-sun', hour=8)
+@sched.scheduled_job('interval', minutes=1)
 def timed_job():
     line_bot_api.broadcast(
         TextSendMessage(text='THIS IS A BROADCAST MESSAGE : GOOD MORNING'))
