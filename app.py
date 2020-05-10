@@ -79,10 +79,11 @@ def handle_message(event):
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
     elif text == 'How to use indyspaceapp.':
-        ans = '''How to use indyspaceapp\n
-        1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)\n\n
-        indyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ\n
-        https://forms.gle/Em3AKBT8mem6ZwqL9'''
+        ans = '''How to use indyspaceapp
+                 1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
+
+                 indyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ
+                 https://forms.gle/Em3AKBT8mem6ZwqL9'''
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=ans))
