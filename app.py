@@ -79,29 +79,16 @@ def handle_message(event):
 ##TextSendMessage(text=get_thestandard_news()))
     if text.lower().strip() == 'news':
         news=1
-        message = {
-    "type": "buttons",
-    "actions": [
-      {
-        "type": "message",
-        "label": "The Standard",
-        "text": "The Standard"
-      },
-      {
-        "type": "message",
-        "label": "BBC",
-        "text": "BBC"
-      }
-    ],
-    "thumbnailImageUrl": "SPECIFY_YOUR_IMAGE_URL",
-    "title": "เลือกสำนักข่าว",
-    "text": "เลือกสำนักข่าวที่คุณต้องการ"
-    } 
-    buttons_message = TemplateSendMessage(
-                      alt_text='Buttons template',
-                      contents=message)
-    line_bot_api.reply_message(
-            event.reply_token,buttons_message)
+        buttons_template = ButtonsTemplate(
+            title='Choose', text='เลือกสำนักข่าวที่ต้องการ', actions=[
+                PostbackAction(label='ping', data='ping'),
+                PostbackAction(label='ping with text', data='ping', text='ping'),                
+                MessageAction(label='The Standard', text='The Standard'),
+                MessageAction(label='BBC', text='BBC')
+            ])
+        line_bot_api.reply_message(
+            event.reply_token,buttons_template)
+            
     elif text.lower().strip() == 'the standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
