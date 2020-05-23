@@ -38,6 +38,10 @@ linesecret = '74d75448fe78ae3cf293ab1a8cfce9b0'
 line_bot_api = LineBotApi(lineaccesstoken)
 handler = WebhookHandler(linesecret)
 
+#CONVERSATION STATUS
+news=0
+stock=0
+
 ####################### new ########################
 @app.route('/')
 def index():
@@ -67,10 +71,6 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    #CONVERSATION STATUS
-    news=0
-    stock=0
-    
     text = event.message.text
     print(event.message.text)
 ##line_bot_api.reply_message(
@@ -80,6 +80,9 @@ def handle_message(event):
 ##TextSendMessage(text=get_thestandard_news()))
     if text.lower().strip() == 'news':
         news=1
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='เลือกสำนักข่าว'))  
     elif text.lower().strip() == 'the standard' and news=1:
         line_bot_api.reply_message(
             event.reply_token,
