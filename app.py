@@ -30,6 +30,7 @@ from linebot.exceptions import (
     LineBotApiError, InvalidSignatureError
 )
 from web_scraping_the_standard import *
+from web_scraping_rotten_tomatoes import *
 
 app = Flask(__name__)
 
@@ -70,6 +71,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     global news
+    global movies
     text = event.message.text
     print(event.message.text)
 ##line_bot_api.reply_message(
@@ -88,12 +90,29 @@ def handle_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(
             event.reply_token,template_message)
-
-    elif text.lower().strip() == 'the standard' and news==1:
+    elif text.lower().strip() == 'The Standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
-        news=0            
+        news=0
+
+    elif text.lower().strip() == 'movies':
+        movies=1
+        buttons_template = ButtonsTemplate(
+            title='Choose', text='เลือกเว็บไซต์ที่ต้องการ', actions=[             
+                MessageAction(label='Rotten Tomatoes', text='Rotten Tomatoes'),
+                MessageAction(label='IMDb', text='IMDb')
+            ])
+        template_message = TemplateSendMessage(
+            alt_text='Buttons alt text', template=buttons_template)
+        line_bot_api.reply_message(
+            event.reply_token,template_message)
+    elif text.lower().strip() == 'Rotten Tomatoes' and movies==1: 
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=get_rottentomatoes()))
+        movies=0
+
     elif text == 'How to use indyspaceapp.':
         ans = '''How to use indyspaceapp
 1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
