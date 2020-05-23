@@ -80,15 +80,15 @@ def handle_message(event):
     if text.lower().strip() == 'news':
         news=1
         buttons_template = ButtonsTemplate(
-            title='Choose', text='เลือกสำนักข่าวที่ต้องการ', actions=[
-                PostbackAction(label='ping', data='ping'),
-                PostbackAction(label='ping with text', data='ping', text='ping'),                
+            title='Choose', text='เลือกสำนักข่าวที่ต้องการ', actions=[             
                 MessageAction(label='The Standard', text='The Standard'),
                 MessageAction(label='BBC', text='BBC')
             ])
+        template_message = TemplateSendMessage(
+            alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(
-            event.reply_token,buttons_template)
-            
+            event.reply_token,template_message)
+
     elif text.lower().strip() == 'the standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
