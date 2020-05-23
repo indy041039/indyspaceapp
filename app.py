@@ -69,6 +69,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global news
     text = event.message.text
     print(event.message.text)
 ##line_bot_api.reply_message(
