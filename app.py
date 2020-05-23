@@ -83,10 +83,11 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='เลือกสำนักข่าว'))  
- #   elif text.lower().strip() == 'the standard' and news=1:
- #       line_bot_api.reply_message(
- #           event.reply_token,
- #           TextSendMessage(text=get_thestandard_news()))            
+    elif text.lower().strip() == 'the standard' and news=1:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text=get_thestandard_news()))
+        news=0            
     elif text == 'How to use indyspaceapp.':
         ans = '''How to use indyspaceapp
 1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
