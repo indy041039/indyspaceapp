@@ -67,6 +67,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    #CONVERSATION STATUS
+    news=0
+    stock=0
+    
     text = event.message.text
     print(event.message.text)
 ##line_bot_api.reply_message(
@@ -75,9 +79,11 @@ def handle_message(event):
 ##line_bot_api.broadcast(
 ##TextSendMessage(text=get_thestandard_news()))
     if text.lower().strip() == 'news':
+        news=1
+    elif text.lower().strip() == 'the standard' and news=1:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=get_thestandard_news()))
+            TextSendMessage(text=get_thestandard_news()))            
     elif text == 'How to use indyspaceapp.':
         ans = '''How to use indyspaceapp
 1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
