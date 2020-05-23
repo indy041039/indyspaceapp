@@ -39,8 +39,8 @@ line_bot_api = LineBotApi(lineaccesstoken)
 handler = WebhookHandler(linesecret)
 
 #CONVERSATION STATUS
-#news=0
-#stock=0
+news=0
+stock=0
 
 ####################### new ########################
 @app.route('/')
@@ -79,7 +79,7 @@ def handle_message(event):
 ##line_bot_api.broadcast(
 ##TextSendMessage(text=get_thestandard_news()))
     if text.lower().strip() == 'news':
- #       news=1
+        news=1
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='เลือกสำนักข่าว'))  
