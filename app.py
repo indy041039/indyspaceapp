@@ -116,6 +116,7 @@ def handle_message(event):
     elif text == 'How to use indyspaceapp.':
         ans = '''How to use indyspaceapp
 1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
+2.ข่าวสารวงการหนัง (พิมพ์ movies)
 
 indyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ
 https://forms.gle/Em3AKBT8mem6ZwqL9'''
