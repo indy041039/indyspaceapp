@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-def get_rottentomatoes:
+def get_rottentomatoes():
     r = requests.get('http://editorial.rottentomatoes.com/news/')
     soup = BeautifulSoup(r.text, 'html.parser')
     block = soup.find('div',{'class':'panel-body'})
@@ -18,5 +18,6 @@ def get_rottentomatoes:
     text = ''
     for i in range(len(news_info)):
         text = text + '{}\n{}\n{}\n\n'.format(news_info[i][0], news_info[i][1], news_info[i][2])
-    
     return text.strip()
+
+get_rottentomatoes()

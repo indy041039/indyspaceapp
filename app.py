@@ -110,7 +110,7 @@ def handle_message(event):
     elif text.lower().strip() == 'Rotten Tomatoes' and movies==1: 
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text='55555'))
+            TextSendMessage(text=get_rottentomatoes()))
         movies=0
 
     elif text == 'How to use indyspaceapp.':
