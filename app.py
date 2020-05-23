@@ -83,7 +83,7 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='เลือกสำนักข่าว'))  
-    elif text.lower().strip() == 'the standard' and news=1:
+    elif text.lower().strip() == 'the standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
