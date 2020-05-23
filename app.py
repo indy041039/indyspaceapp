@@ -126,7 +126,7 @@ https://forms.gle/Em3AKBT8mem6ZwqL9'''
     else:
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text=event.message.text))
+            TextSendMessage(text='งงค้าบ'))
 
 if __name__ == "__main__":
     app.run()
