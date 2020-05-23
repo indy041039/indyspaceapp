@@ -90,7 +90,7 @@ def handle_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(
             event.reply_token,template_message)
-    elif text.lower().strip() == 'The Standard' and news==1:
+    elif text == 'The Standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
@@ -107,7 +107,7 @@ def handle_message(event):
             alt_text='Buttons alt text', template=buttons_template)
         line_bot_api.reply_message(
             event.reply_token,template_message)
-    elif text.lower().strip() == 'Rotten Tomatoes' and movies==1: 
+    elif text == 'Rotten Tomatoes' and movies==1: 
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_rottentomatoes()))
