@@ -38,9 +38,7 @@ linesecret = '74d75448fe78ae3cf293ab1a8cfce9b0'
 line_bot_api = LineBotApi(lineaccesstoken)
 handler = WebhookHandler(linesecret)
 
-#CONVERSATION STATUS
-news=0
-stock=0
+
 
 ####################### new ########################
 @app.route('/')
