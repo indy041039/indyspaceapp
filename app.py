@@ -113,12 +113,10 @@ def handle_message(event):
             TextSendMessage(text=get_rottentomatoes()))
         movies=0
 
-    elif text == 'How to use indyspaceapp.':
-        ans = '''How to use indyspaceapp
-1.อัปเดตข่าว เศรษฐกิจ การเมือง สังคม ปรัชญา คำคม วิถีชีวิต (พิมพ์ news)
-2.ข่าวสารวงการหนัง (พิมพ์ movies)
-
-indyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้ครับ
+    elif text == 'Hello, Friend':
+        ans = '''Hello, Friend
+ขอบคุณที่แอดเราเป็นเพื่อนนะ 
+ตอนนี้ indyspaceapp อยู่ในช่วงกำลังพัฒนาสามารถเสนอความคิดเห็นมาได้เลย
 https://forms.gle/Em3AKBT8mem6ZwqL9'''
         line_bot_api.reply_message(
             event.reply_token,
