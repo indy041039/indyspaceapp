@@ -94,8 +94,8 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='กรุณารอสักครู่'))
-        line_bot_api.reply_message(
-            event.reply_token,
+        line_bot_api.push_message(
+            event.source.user_id,
             TextSendMessage(text=get_thestandard_news()))
         news=0
 
@@ -114,8 +114,8 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text='กรุณารอสักครู่'))
-        line_bot_api.reply_message(
-            event.reply_token,
+        line_bot_api.push_message(
+            event.source.user_id,
             TextSendMessage(text=get_rottentomatoes()))
         movies=0
 
