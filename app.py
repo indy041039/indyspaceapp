@@ -93,6 +93,9 @@ def handle_message(event):
     elif text == 'The Standard' and news==1:
         line_bot_api.reply_message(
             event.reply_token,
+            TextSendMessage(text='กรุณารอสักครู่'))
+        line_bot_api.reply_message(
+            event.reply_token,
             TextSendMessage(text=get_thestandard_news()))
         news=0
 
@@ -108,6 +111,9 @@ def handle_message(event):
         line_bot_api.reply_message(
             event.reply_token,template_message)
     elif text == 'Rotten Tomatoes' and movies==1: 
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextSendMessage(text='กรุณารอสักครู่')
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_rottentomatoes()))
