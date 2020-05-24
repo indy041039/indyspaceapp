@@ -113,7 +113,7 @@ def handle_message(event):
     elif text == 'Rotten Tomatoes' and movies==1: 
         line_bot_api.reply_message(
             event.reply_token,
-            TextSendMessage(text='กรุณารอสักครู่')
+            TextSendMessage(text='กรุณารอสักครู่'))
         line_bot_api.reply_message(
             event.reply_token,
             TextSendMessage(text=get_rottentomatoes()))
